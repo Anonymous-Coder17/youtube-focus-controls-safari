@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>YouTube Focus Controls</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header class="top">
+    <div class="brand-mark" aria-hidden="true">F</div>
+    <div class="brand-copy">
+      <h1>YouTube Focus</h1>
+      <p>Shape your viewing space</p>
+    </div>
+    <label class="switch master-switch" title="Turn all focus rules on or off">
+      <input id="enabled" type="checkbox" aria-label="Enable focus rules">
+      <span class="slider"></span>
+    </label>
+  </header>
+
+  <main id="settings" aria-live="polite">
+    <section class="group">
+      <h2>Home &amp; navigation</h2>
+      <div class="rows">
+        <label class="row"><span>Homepage feed</span><input type="checkbox" data-key="hideHomeFeed"></label>
+        <label class="row"><span>Shorts</span><input type="checkbox" data-key="hideShorts"></label>
+        <label class="row"><span>Explore and Trending</span><input type="checkbox" data-key="hideExploreTrending"></label>
+        <label class="row"><span>More from YouTube</span><input type="checkbox" data-key="hideMoreFromYouTube"></label>
+        <label class="row"><span>Hide/redirect Subscriptions</span><input type="checkbox" data-key="hideSubscriptions"></label>
+      </div>
+    </section>
+
+    <section class="group">
+      <h2>On the watch page</h2>
+      <div class="rows">
+        <label class="row"><span>Video sidebar</span><input type="checkbox" data-key="hideVideoSidebar"></label>
+        <label class="row"><span>Recommended videos</span><input type="checkbox" data-key="hideRecommended"></label>
+        <label class="row"><span>Live chat</span><input type="checkbox" data-key="hideLiveChat"></label>
+        <label class="row"><span>Playlist panel</span><input type="checkbox" data-key="hidePlaylist"></label>
+        <label class="row"><span>Mix radio playlists</span><input type="checkbox" data-key="hideMixes"></label>
+        <label class="row"><span>Merch, tickets and offers</span><input type="checkbox" data-key="hideMerch"></label>
+        <label class="row"><span>Video information</span><input type="checkbox" data-key="hideVideoInfo"></label>
+        <label class="row"><span>Like and share buttons</span><input type="checkbox" data-key="hideButtonsBar"></label>
+        <label class="row"><span>Channel and subscribe button</span><input type="checkbox" data-key="hideChannel"></label>
+        <label class="row"><span>Video description</span><input type="checkbox" data-key="hideDescription"></label>
+        <label class="row"><span>Comments</span><input type="checkbox" data-key="hideComments"></label>
+        <label class="row"><span>End-screen video suggestions</span><input type="checkbox" data-key="hideEndScreenVideos"></label>
+        <label class="row"><span>End-screen cards</span><input type="checkbox" data-key="hideEndScreenCards"></label>
+      </div>
+    </section>
+
+    <section class="group">
+      <h2>Page details</h2>
+      <div class="rows">
+        <label class="row"><span>Top header</span><input type="checkbox" data-key="hideHeader"></label>
+        <label class="row"><span>Notification bell</span><input type="checkbox" data-key="hideNotifications"></label>
+        <label class="row"><span>Irrelevant search sections</span><input type="checkbox" data-key="hideInaptSearch"></label>
+      </div>
+    </section>
+
+    <section class="group">
+      <h2>Playback</h2>
+      <div class="rows">
+        <label class="row"><span>Disable autoplay</span><input type="checkbox" data-key="disableAutoplay"></label>
+        <label class="row"><span>Hide annotations and cards</span><input type="checkbox" data-key="disableAnnotations"></label>
+      </div>
+    </section>
+    <p class="note" id="status">Settings save automatically.</p>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>
